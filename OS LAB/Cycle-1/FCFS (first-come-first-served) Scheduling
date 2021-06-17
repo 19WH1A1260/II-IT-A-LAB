@@ -1,1 +1,60 @@
+/******************************************************************************
+
+fcfs 
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+    int p, bt[50], ofp[20], wt[50], tat[50], sumwt, sumtat, i, sumbt;
+    float avgwt, avgtat;
+    printf("enter no of processes:");
+    scanf("%d", &p);
+    printf("enter order of process: ");
+    for(i=0;i<p;i++)
+    {
+        
+        scanf("%d", &ofp[i]);
+    }
+    printf("enter burst time: ");
+    for(i=0;i<p;i++)
+    {
+        printf("P[%d]:", ofp[i]);
+        scanf("%d", &bt[i]);
+    }
+    wt[0] = 0;
+    tat[0] = bt[0];
+    sumbt = bt[0];
+    sumwt = 0;
+    sumtat = 0;
+    for(i=1;i<p;i++)
+    {
+        sumbt = sumbt + bt[i]; 
+        
+        wt[i] = bt[i-1] + wt[i-1];
+        
+    }
+    for(i=1;i<p;i++)
+    {
+        
+        tat[i] = bt[i] + tat[i-1];
+        
+    }
+    for(i=0;i<p;i++)
+    {
+        printf("\nP[%d]\t\t%d\t\t%d\t\t%d", ofp[i], bt[i], wt[i], tat[i]);
+    }
+    for(i=0;i<p;i++)
+    {
+        sumwt = sumwt + wt[i];
+        sumtat = sumtat + tat[i];
+    }
+    avgwt = (float)(sumwt) / p;
+    avgtat = (float)(sumtat) / p;
+    printf("\navg waiting time is: %.2f", avgwt);
+    printf("\navg turnaround time is: %.2f", avgtat);
+
+    return 0;
+}
 
