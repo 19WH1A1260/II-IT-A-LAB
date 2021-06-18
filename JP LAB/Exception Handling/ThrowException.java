@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-class ThrowsException
+class ThrowException
 {
 public static void validatevote(int age) 
 {
