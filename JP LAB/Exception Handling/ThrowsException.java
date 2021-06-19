@@ -6,7 +6,7 @@ public static void validatevote(int age) throws ArithmeticException
 {
 if(age<18)
 {
-throw new ArithmeticException("not valid the vote");
+throw new ArithmeticException("not valid to vote");
 }
 else
 {
