@@ -1,0 +1,36 @@
+create database mydatabase;
+use mydatabase;
+create table passenger(pid int primary key, name varchar(20), age int, address char(100));
+insert into passenger values(5200, 'Harry', 23, 'Godric Hollow, England');
+insert into passenger values(5202, 'Parker', 21, 'Station road, England');
+insert into passenger values(5208, 'Edmund', 23, 'High Street, England');
+insert into passenger values(5212, 'Hendery', 25, 'Park road, England');
+insert into passenger values(5214, 'Alex', 22, 'Hill road, England');
+select * from passenger;
+select pid, name from passenger;
+update passenger set age = 24 where pid = 5200;
+alter table passenger add gender varchar(10);
+update passenger set gender = 'male';
+update passenger set gender = 'female' where pid = 5214;
+alter table passenger drop age;
+delete from passenger where pid = 5214;
+alter table passenger modify address varchar(50);
+select * from passenger;
+
+
+create table bus(busno int primary key, bussource char(50), destination char(20));
+insert into bus values(1344, 'Edinburgh', 'London');
+insert into bus values(7848, 'Wales', 'London');
+insert into bus values(5869, 'Bradford', 'Wales');
+insert into bus values(5985, 'Liverpool', 'Edinburgh');
+insert into bus values(5378, 'Winchester', 'London');
+select * from bus;
+
+create table ticket(ticketno int primary key, journeydate date, arrivaltime varchar(10), deptime varchar(10));
+insert into ticket values(55, '2021-06-13', '14:25', '17:30');
+insert into ticket values(57, '2021-06-11', '12:05', '16:30');
+insert into ticket values(59, '2021-06-09', '14:25', '18:30');
+insert into ticket values(51, '2021-06-17', '16:15', '20:11');
+insert into ticket values(60, '2021-06-16', '13:20', '15:30');
+select * from ticket;
+
