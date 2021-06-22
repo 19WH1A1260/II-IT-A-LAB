@@ -1,0 +1,29 @@
+pid	name	age	address
+5200	Harry	23	Godric Hollow, England
+5202	Parker	21	Station road, England
+5208	Edmund	23	High Street, England
+5212	Hendery	25	Park road, England
+5214	Alex	22	Hill road, England
+pid	name
+5200	Harry
+5202	Parker
+5208	Edmund
+5212	Hendery
+5214	Alex
+pid	name	address	gender
+5200	Harry	Godric Hollow, England	male
+5202	Parker	Station road, England	male
+5208	Edmund	High Street, England	male
+5212	Hendery	Park road, England	male
+busno	bussource	destination
+1344	Edinburgh	London
+7848	Wales	London
+5869	Bradford	Wales
+5985	Liverpool	Edinburgh
+5378	Winchester	London
+ticketno	journeydate	arrivaltime	deptime
+55	2021-06-13	14:25	17:30
+57	2021-06-11	12:05	16:30
+59	2021-06-09	14:25	18:30
+51	2021-06-17	16:15	20:11
+60	2021-06-16	13:20	15:30
