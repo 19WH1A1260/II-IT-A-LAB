@@ -1,0 +1,23 @@
+create database 19wh1a1260;
+use 19wh1a1260;
+create table employee(ssn int not null , unique (ssn), empname varchar(20) not null , age int default 25);
+insert into employee values(759, 'kevin', 35);
+insert into employee values(779, 'jackie', 31);
+insert into employee values(728, 'keira', 30);
+insert into employee values(743, 'emma', null);
+insert into employee(ssn, empname) values (762, 'sam');
+select * from employee;
+
+create table student(sid int primary key, name varchar(20), check(sid>0));
+insert into student values(12, 'Tom');
+insert into student values(16, 'jane');
+insert into student values(17, 'foster');
+insert into student values(21, 'hiddleston');
+select * from student;
+
+create table events(eventid int primary key, eventname char(20), coordid int, foreign key(coordid) references student(sid));
+insert into events values(4215, 'mathletes', 17);
+insert into events values(4285, 'science exb', 12);
+insert into events values(4758, 'magic show', 21);
+insert into events values(4785, 'art showcase', 16);
+select * from events;
