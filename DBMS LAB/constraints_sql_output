@@ -1,0 +1,16 @@
+ssn	empname	age
+759	kevin	35
+779	jackie	31
+728	keira	30
+743	emma	NULL
+762	sam	25
+sid	name
+12	Tom
+16	jane
+17	foster
+21	hiddleston
+eventid	eventname	coordid
+4215	mathletes	17
+4285	science exb	12
+4758	magic show	21
+4785	art showcase	16
