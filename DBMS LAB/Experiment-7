@@ -1,0 +1,19 @@
+create table Students(id int primary key, name varchar(20), cgpa real, busno int);
+insert into Students values(1,'ed',8.9, 1);
+insert into Students values(2,'blue',8.5, 1);
+insert into Students values(3,'harry',9.0, 2);
+insert into Students values(4,'drac',8.9, 3);
+insert into Students values(5,'alex',9.5, 4);
+select * from Students;
+select min(cgpa) as MIN_CGPA from Students;
+select max(cgpa) as MAX_CGPA from Students;
+select avg(cgpa) as Avg_CGPA from Students;
+select sum(cgpa) as sum_CGPA from Students;
+select count(*) from Students;
+
+select * from Students where cgpa > (select avg(cgpa) from Students);
+select * from Students where cgpa < (select max(cgpa) from Students);
+select name from Students where cgpa > (select avg(cgpa) from Students);
+
+select busno, count(*) as studentcountinbus from Students group by busno;
+select id, cgpa from Students group by(id) having avg(cgpa) > 8.5;
