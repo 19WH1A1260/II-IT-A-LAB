@@ -1,4 +1,6 @@
 Relation Schema:
-1)Bus(bus_no int primary key, source char(20), destination char(20), bustime varchar(10));
-2)Ticket(
+1)Bus(bus_no int primary key, source char(20), destination char(20), bustime varchar(5));
+2)Ticket(Ticket_no int primary key, price real, dep_time varchar(5), journey_date date);
+3)Passenger(pid int primary key, address char(50), age int, pname char(20));
+4)Reservation(pid int, foreign key(pid) references Passenger(pid), status char(10), journey_date date, foreign key(journey_date) references Ticket(journey_date), phone_no int); 
 
