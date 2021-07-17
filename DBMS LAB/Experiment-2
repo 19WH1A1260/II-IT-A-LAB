@@ -1,2 +1,4 @@
 Relation Schema:
-1)Bus(bus_no int primary key, 
+1)Bus(bus_no int primary key, source char(20), destination char(20), bustime varchar(10));
+2)Ticket(
+
