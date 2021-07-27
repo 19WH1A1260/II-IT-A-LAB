@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+    int memsize = 15;
+    int n, fno, offset, logadd, phyadd, p[100], ps, choice = 0, i;
+    printf("mem size is %d", memsize);
+    printf("enter ps");
+    scanf("%d", &ps);
+    n = memsize/ps;
+    for(i=0;i<n;i++)
+    {
+        printf("\nEnter the frame of page%d:",i+1);
+        scanf("%d", &p[i]);
+    }
+    do{
+        printf("enter la");
+        scanf("%d", &logadd);
+        fno = logadd/ps;
+        offset = logadd%ps;
+        phyadd = (p[fno] * ps) + offset;
+        printf("phy add %d", phyadd);
+        printf("do u want to continue?");
+        scanf("%d", &choice);
+    }
+    while(choice == 1);
+}
